@@ -1,2 +1,4 @@
 # bestseller
-Technical assigment
+Technical assigment  
+
+![data model] (Clothing_shoes_jewelry.drawio.png)
