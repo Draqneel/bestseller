@@ -1,4 +1,4 @@
 # bestseller
 Technical assigment  
 
-![data model] (Clothing_shoes_jewelry.drawio.png)
+![data model] (https://github.com/Draqneel/bestseller/blob/main/Clothing_shoes_jewelry.drawio.png)
