@@ -51,6 +51,10 @@ bash bin/setup_requirements.sh
 ```
 
 ```bash
+bash bin/setup_env.sh
+```
+
+```bash
 bash bin/run_airflow.sh
 ```
 (If superuser already exists just comment `airflow users create` in `*.sh` file.)
