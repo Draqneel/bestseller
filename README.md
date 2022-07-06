@@ -4,7 +4,7 @@ I chose **Clothing, Shoes and Jewelry** [from](http://jmcauley.ucsd.edu/data/ama
 
 In a project, I first used [DataStax_Astra_DB](https://auth.cloud.datastax.com/) as a cloud data service and `Cassandra` as a database (not because it is the best database for analytics, just first try).
 ## data architecture  
-I'm create the diagram of data flows:  
+The diagram of data flows:  
 
 ![data model](https://github.com/Draqneel/bestseller/blob/main/Clothing_shoes_jewelry.drawio.png?raw=True)  
 
@@ -42,16 +42,12 @@ This will be a pay-as-you-go method, but they won't ask for a payment method unt
 - Download `Secure Bundle`
 - Drag-and-Drop the `Secure Bundle` into the running Gitpod container.
 
-### 1.7 - Copy and paste the contents of `bin/setup_db_sheme.cql` into the CQLSH terminal
+### 1.7 - Copy and paste the contents of `bin/setup_db_scheme.cql` into the CQLSH terminal
 
 ## 2. Set up Airflow and other stuff
 
 ```bash
 bash bin/setup_requirements.sh
-```
-
-```bash
-bash bin/setup_env.sh
 ```
 
 ```bash
@@ -89,10 +85,16 @@ mkdir ~/airflow/dags
 mv -r /dags ~/airflow/dags
 ```
 
-## 5. Update the TODO's in properties.config with your specific parameters
+## 5. Update the TODO's in properties.config and setup_env.sh with your specific parameters
 
 ```bash
 vim properties.conf
+```
+
+```bash
+vim bin/setup_env.sh
+
+bash bin/setup_env.sh
 ```
 
 ## 6. Open port 8080 to see Airflow UI and check if pipelines exists. 

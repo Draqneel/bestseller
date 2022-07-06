@@ -1,5 +1,7 @@
-export AIRFLOW_HOME="$PWD/airflow"
-export AIRFLOW_CONN_SPARK_DEFAULT="spark://MacBook-Pro-Anton.local:7077"
+export AIRFLOW_HOME="~/airflow"
+
+# TODO: add Spark master url
+export AIRFLOW_CONN_SPARK_DEFAULT=<master_url>
 
 export PYTHONPATH="$PWD"
 export PROJECT_PATH="$PWD"
