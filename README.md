@@ -44,36 +44,35 @@ This will be a pay-as-you-go method, but they won't ask for a payment method unt
 
 ### 1.7 - Copy and paste the contents of `bin/setup_db_scheme.cql` into the CQLSH terminal
 
-## 2. Set up Airflow and other stuff
+## 2. Start Spark in standalone mode
 
-```bash
-bash bin/setup_requirements.sh
-```
-
-```bash
-bash bin/setup_env.sh
-```
-
-```bash
-bash bin/run_airflow.sh
-```
-(If superuser already exists just comment `airflow users create` in `*.sh` file.)
-
-## 3. Start Spark in standalone mode
-
-### 3.1 - Start master
+### 2.1 - Start master
 
 ```bash
 ./spark-3.0.1-bin-hadoop2.7/sbin/start-master.sh
 ```
 
-### 3.2 - Start worker
+### 2.2 - Start worker
 
 Open port 8081 in the browser, copy the master URL, and paste in the designated spot below
 
 ```bash
 ./spark-3.0.1-bin-hadoop2.7/sbin/start-slave.sh <master-URL>
 ```
+## 3. Set up Airflow and other stuff
+
+```bash
+bash bin/setup_requirements.sh
+```
+
+```bash
+bash bin/setup_env.sh  # Insert <master-URL>!
+```
+
+```bash
+bash bin/run_airflow.sh
+```
+(If superuser already exists just comment `airflow users create` in `*.sh` file.)
 
 ## 4. Move /dags to ~/airflow/dags
 
